@@ -24,12 +24,16 @@ public class WoodenHopperMod
     public static final String PREFIX = DOMAIN + ":";
 
     Block blockHopper;
+    TileEntity tileEntityHopper;
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
         blockHopper = new BlockWoodenHopper();
-        GameRegistry.registerBlock(blockHopper, TileEntityWoodenHopper.class, "BTWoodenHopper");
+        tileEntityHopper = new TileEntityWoodenHopper();
+
+        GameRegistry.registerTileEntity(tileEntityHopper, "WoodenHopper")
+        GameRegistry.registerBlock(blockHopper, "WoodenHopper");
     }
 
     @Mod.EventHandler
