@@ -2,15 +2,23 @@ package com.builtbroken.woodenhopper.hopper;
 
 import com.builtbroken.woodenhopper.WoodenHopperMod;
 import net.minecraft.block.BlockHopper;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.tileentity.TileEntityHopper;
+import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
 
 /**
  * Created by Green on 11/15/2016.
  */
-public class BlockWoodenHopper extends BlockHopper
-{
+public class BlockWoodenHopper extends BlockHopper {
 
-    public BlockWoodenHopper()
+    @Override
+    public TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_)
     {
+        return new TileEntityWoodenHopper();
+    }
+
+    public BlockWoodenHopper() {
 
         super();
 
@@ -21,5 +29,7 @@ public class BlockWoodenHopper extends BlockHopper
         this.setStepSound(soundTypeWood);
 
     }
+
+
 
 }

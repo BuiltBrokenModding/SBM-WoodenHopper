@@ -17,28 +17,25 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
  */
 
 @Mod(modid = WoodenHopperMod.DOMAIN, name = "Wooden Hopper Mod", version = "@MAJOR@.@MINOR@.@REVIS@.@BUILD@")
-public class WoodenHopperMod
-{
+public class WoodenHopperMod {
 
     public static final String DOMAIN = "woodenhopper";
     public static final String PREFIX = DOMAIN + ":";
 
     Block blockHopper;
-    TileEntity tileEntityHopper;
+    //TileEntity tileEntityHopper;
 
     @Mod.EventHandler
-    public void preInit(FMLPreInitializationEvent event)
-    {
+    public void preInit(FMLPreInitializationEvent event) {
         blockHopper = new BlockWoodenHopper();
-        tileEntityHopper = new TileEntityWoodenHopper();
+        //tileEntityHopper = new TileEntityWoodenHopper();
 
-        GameRegistry.registerTileEntity(tileEntityHopper, "WoodenHopper")
+        //GameRegistry.registerTileEntity(tileEntityHopper, "WoodenHopper");
         GameRegistry.registerBlock(blockHopper, "WoodenHopper");
     }
 
     @Mod.EventHandler
-    public void postInit(FMLPostInitializationEvent event)
-    {
+    public void postInit(FMLPostInitializationEvent event) {
         //GameRegistry.addRecipe();
 
     }
