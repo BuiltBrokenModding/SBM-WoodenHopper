@@ -1,5 +1,7 @@
 package com.builtbroken.woodenhopper;
 
+import com.builtbroken.woodenhopper.hopper.BlockWoodenHopper;
+import com.builtbroken.woodenhopper.hopper.TileEntityWoodenHopper;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -21,15 +23,19 @@ public class WoodenHopperMod
     public static final String DOMAIN = "woodenhopper";
     public static final String PREFIX = DOMAIN + ":";
 
+    Block blockHopper;
+
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-
+        blockHopper = new BlockWoodenHopper();
+        GameRegistry.registerBlock(blockHopper, TileEntityWoodenHopper.class, "BTWoodenHopper");
     }
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
+        //GameRegistry.addRecipe();
 
     }
 
