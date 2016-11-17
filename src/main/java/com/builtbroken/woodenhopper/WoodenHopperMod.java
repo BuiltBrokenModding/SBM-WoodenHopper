@@ -7,8 +7,10 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntityHopper;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 
 /**
@@ -22,16 +24,14 @@ public class WoodenHopperMod {
     public static final String DOMAIN = "woodenhopper";
     public static final String PREFIX = DOMAIN + ":";
 
-    Block blockHopper;
-    //TileEntity tileEntityHopper;
+    private Block blockHopper;
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         blockHopper = new BlockWoodenHopper();
-        //tileEntityHopper = new TileEntityWoodenHopper();
 
-        //GameRegistry.registerTileEntity(tileEntityHopper, "WoodenHopper");
         GameRegistry.registerBlock(blockHopper, "WoodenHopper");
+        GameRegistry.registerTileEntity(TileEntityHopper.class, "WoodenHopper");
     }
 
     @Mod.EventHandler
