@@ -1,17 +1,12 @@
 package com.builtbroken.woodenhopper;
 
 import com.builtbroken.woodenhopper.hopper.BlockWoodenHopper;
-import com.builtbroken.woodenhopper.hopper.TileEntityWoodenHopper;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.init.Items;
-import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntityHopper;
-import net.minecraftforge.oredict.ShapedOreRecipe;
 
 /**
  * Simple mod to add wooden hoppers to MC.
@@ -25,6 +20,7 @@ public class WoodenHopperMod {
     public static final String PREFIX = DOMAIN + ":";
 
     private Block blockHopper;
+
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
