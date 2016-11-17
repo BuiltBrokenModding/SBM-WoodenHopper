@@ -40,21 +40,21 @@ public class BlockWoodenHopper extends BlockHopper {
     @Override
     public String getItemIconName()
     {
-        return WoodenHopperMod.PREFIX+"hopper";
+        return WoodenHopperMod.PREFIX+"woodenHopper";
     }
 
-    @Override
-    public IIcon getIcon(int p_149691_1_, int p_149691_2_)
-    {
-        return p_149691_1_ == 1 ? this.top : this.outside;
-    }
+    //@Override
+    //public IIcon getIcon(int p_149691_1_, int p_149691_2_)
+    //{
+    //    return p_149691_1_ == 1 ? this.top : this.outside;
+    //}
 
     @Override
     public void registerBlockIcons(IIconRegister iReg)
     {
-        this.outside = iReg.registerIcon(WoodenHopperMod.PREFIX + "hopper_outside");
-        this.top = iReg.registerIcon(WoodenHopperMod.PREFIX + "hopper_top");
-        this.inside = iReg.registerIcon(WoodenHopperMod.PREFIX + "hopper_inside");
+        this.outside = iReg.registerIcon(WoodenHopperMod.PREFIX + "wood_hopper_outside");
+        this.top = iReg.registerIcon(WoodenHopperMod.PREFIX + "wood_hopper_top");
+        this.inside = iReg.registerIcon(WoodenHopperMod.PREFIX + "wood_hopper_inside");
     }
 
 
